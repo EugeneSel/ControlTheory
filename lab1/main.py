@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 # variant 13
 n = 13
 
+
 def path_definition(N = 100, K = 300, s0 = n, v = n, l = n, phi = np.pi * n / 25):
     tau = l / v / N
     x1_star = l * np.cos(phi)
@@ -45,7 +46,7 @@ plt.show()
 
 for i in range(-5, 6):
     x1, x2, x1_star, x2_star = path_definition(phi = np.pi * i / 25)
-    plt.plot(x1, x2, label='phi = %f' %(np.pi * i /25))
+    plt.plot(x1, x2, label='phi = %f' %(np.pi * i / 25))
     plt.scatter(x1_star, x2_star, color='red')
 plt.title('Графік траекторії судна зі змінним параметром phi (n від -5 до 5)')
 plt.xlabel('$x1$')
@@ -60,6 +61,7 @@ for i in range(5, 15):
 plt.title('Графік траекторії судна зі змінним параметром l (l від 5 до 14)')
 plt.xlabel('$x1$')
 plt.ylabel('$x2$')
+
 plt.legend()
 plt.show()
 
